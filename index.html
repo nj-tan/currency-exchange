@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Currency Converter</title>
+</head>
+<body>
+
+    <div id="currencyContainer"></div>
+
+    <div class="converter-container">
+        <h1>Currency Converter</h1>
+
+        <div class="input-section">
+            <label for="baseCurrency">Base Currency:</label>
+            <select id="baseCurrency"></select>
+        </div>
+
+        <div class="input-section">
+            <label for="targetCurrency">Target Currency:</label>
+            <select id="targetCurrency"></select>
+        </div>
+
+        <div class="input-section">
+            <label for="amount">Amount to Convert:</label>
+            <input type="number" id="amount" placeholder="Enter amount">
+        </div>
+
+        <button onclick="convertCurrency()">Convert</button>
+        <button onclick="reverseCurrencies()">Reverse Currencies</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+
+    <div class="attribute">
+        Created by
+        <a href="https://github.com/nj-tan" target="_blank"> Neiljohn Tan </a>
+      </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

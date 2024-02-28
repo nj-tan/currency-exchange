@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #367038;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px; /* To give some space around the edges of the page */
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px; /* This adds space between your currency container and converter container */
+    width: 100%;
+    max-width: 1200px; /* Adjust this value as needed */
+}
+
+.converter-container {
+    background-color: #ececec;
+    padding: 1.5rem;
+    margin: 5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1; /* Take up equal space */
+    max-width: calc(50% - 10px); /* Adjust width, subtracting the gap */
+}
+
+#currencyContainer {
+    flex: 1; /* Take up equal space */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* creates 5 columns */
+    gap: 10px; /* spacing between boxes */
+    max-height: 500px; /* adjust based on your preference */
+    overflow-y: auto; /* makes the container scrollable */
+    padding: 10px; /* adds some space inside the container */
+    margin-left: 5rem;
+    background-color: #f9f9f9; /* light grey background */
+    border-radius: 5px; /* rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* subtle shadow */
+    max-width: calc(50% - 10px); /* Adjust width, subtracting the gap */
+}
+
+#currencyContainer div {
+    background-color: #ffffff; /* white background for currency boxes */
+    padding: 10px;
+    border-radius: 5px; /* rounded corners for currency boxes */
+    text-align: center; /* center the text inside the boxes */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* subtle shadow for boxes */
+    line-height: 1.5; /* more readable line height */
+    font-size: 0.9rem; /* smaller font size */
+}
+
+/* Add hover effect for currency boxes */
+#currencyContainer div:hover {
+    background-color: #e9e9e9; /* slightly darker background on hover */
+    cursor: pointer; /* change cursor to indicate interactivity */
+}
+
+.input-section {
+    font-size: 1.2rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+label {
+    margin-right: 1rem;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 0.8rem 1.4rem;
+    margin: 0 0.8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+.result {
+    margin-top: 1.4rem;
+    font-size: 1.2rem;
+}
+
+.attribute{
+    position: absolute;
+    bottom: 15px;
+    left:15px;
+    color: #ececec;
+}
+
+.attribute:hover {
+    transform: scale(1.1);
+}
+
+a {
+    color: #61eb65;
+    text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .converter-container,
+    #currencyContainer {
+        max-width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px; /* Adds space between containers on smaller screens */
+    }
+
+    #currencyContainer {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+        max-height: 400px; /* Adjust height as needed */
+    }
+}
